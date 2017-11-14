@@ -9,7 +9,9 @@ import (
 type key string
 
 // RequestUserIDKey represents key used to refer to user_id stored in request
-const RequestUserIDKey key = "user_id"
+const (
+	RequestUserIDKey key = "user_id"
+)
 
 // ErrNoTokenInRequest is an error indicating the request was made without an auth token in the header
 // ErrInvalidTokenFormat is an error indicating the token was malformed
