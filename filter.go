@@ -18,8 +18,8 @@ var (
 	ErrInvalidTokenFormat = errors.New("Authorization header format must be JWT {token}")
 )
 
-// JWTAuthFilter is designed to be a middleware which verifies each server request
-func JWTAuthFilter(inner http.Handler) http.Handler {
+// AuthFilter is designed to be a middleware which validates each server request against an auth token
+func AuthFilter(inner http.Handler) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
